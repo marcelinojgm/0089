@@ -1,9 +1,9 @@
 import java.util.HashMap;
 /**
- * Write a description of class AgendaTelefonica here.
+ * Simula una agenda telefonica.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Marcelino José Granda Muñoz
+ * @version 2015-03-04
  */
 public class AgendaTelefonica
 {
@@ -20,20 +20,26 @@ public class AgendaTelefonica
     }
 
     /**
-     * introduce un nuevo registro a la agenda
-     * @
-     * @
+     * introduce un nuevo registro a la agenda indicandole 
+     * el nombre y numero telefono
+     * @param name nombre del propietario del numero
+     * @param number numero de telefono asociado a name
      */
     public void enterNumber(String name, String number){
         agenda.put(name, number);
     }
 
+    /**
+     * retorna el numero asociado al nombre de la persona introducido
+     * @param name nombre de la persona que se desa saber el nombre
+     * @return numero asociado al nombre  o null si no hay un registro con ese conmbre
+     */
     public String lookupNumber(String name){
         return agenda.get(name);
     }
 
     /**
-     * Print all keys
+     * imprime todos los nombres delaagenda
      */
     public void printAllNames()
     {
